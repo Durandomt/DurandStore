@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+    
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 56px;
+}
+
+.menu > li{
+    float: left;
+    list-style: none;
+    padding: 16px;
+}
+
+.submenu{
+    list-style: none;
+    display: none;
+    
+}
+
+.menu li:hover .submenu{
+    display: block;
+}
+
+.loja img{
+    height: 360px;
+    width: 300px;
+    display: block;
+    margin-left: 40px;
+    ;
+}
+
+aside{
+    margin-left:350px;
+    margin-top: 50px;
+}
+
+aside h2{
+    color: cornflowerblue;
+    padding: 16px;
+    border-bottom: 4px solid cornflowerblue;
+}
+
+main section h2{
+    color: cornflowerblue;
+    padding: 16px;
+    border-bottom: 4px solid cornflowerblue;
+}
+
+.produtos{
+    display: grid;
+    grid-template-columns:repeat(4,25%) ;
+    row-gap: 5%;
+    column-gap: 10%;
+}
+
+button{
+    background-color: cornflowerblue;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgba(100,149,237,0.6);
+    transition: 0.2s;
+}
+
+@media screen and (max-width:640px) {
+    header, .container{
+        display: block;
+    }
+
+    .loja img{
+        display: none;
+    }
+    aside {
+        display:inline;
+    }
+
+    .produtos{
+        display: block;
+    }
+
+    .container{
+        max-width: 90%;
+    }
+    
+}
+
+@media screen and (min-width: 641px)  and (max-width:1023px){
+    .loja img{
+        display: block;
+        width: 40%;
+        margin-top: 30px;
+        
+    }
+
+    aside{
+        margin: auto 0;
+    }
+
+    
+
+    .produtos{
+    grid-template-columns: repeat(2,49%);
+}
+}
